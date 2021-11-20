@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Charges</title>
+    <script>
+        document.writeln("<h1>Example to show how Calculate Charges button works</h1>");
+        function start()
+        {
+            var button = document.getElementById("calculateButton");
+            button.addEventListener("click", getCharges, false);
+        } // end of function start
+
+        function getCharges()
+        {
+            var priceField = document.getElementById("priceField");
+            var ticketField = document.getElementById("ticketField");
+            var ticketField = document.getElementById("currentCharge");
+
+            var price = parseFloat(priceField.value);
+            var tickets = parseFloat(ticketField.value);
+            var fee = calculateCharges(price, tickets);
+
+            currentCharge.innerHTML = "Current charge: " + fee.toFixed(2);
+        } // end of function getCharges
+
+        function calculateCharges()
+        {
+            var charge = price * tickets;
+            return charge;
+        } // end of function calculateCharges
+        window.addEventListener(load, start, false);
+
+    </script>
+</head>
+<body>
+    <form action = "submit">
+        <p> <label>No. of tickets: <input id ="ticketField" type ="number"> </label> </p>
+        <br>
+        <p> <label>Price: <input id ="priceField" type ="number"> </label> </p>
+        <br>
+        <p> <input id ="calculateButton" type ="button" value="Calculate Charges"> </label> </p>
+        
+        
+            </form>
+</body>
+
+
+</html>

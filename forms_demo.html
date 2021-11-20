@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <p>Please fill out this form to help us improve our site</p>
+    <form method = "post" action = "http://www.sjsu.edu">
+        <!--<input type = "text"> inserts a text field-->
+        <input type = "hidden" name = "recipient"
+        value = "www.sjsu.edu">
+        <input type = "hidden" name = "subject"
+        value = "Feedback Form">
+        <input type = "hidden" name = "redirect"
+        value = "main.html">
+        <p><label> Name:
+            <input name = "name" type = "text" size ="25" maxlength ="30">
+        </label>
+
+        </p>
+
+<p> <label> Comments:<br>
+<textarea name = "comments"
+    rows = "4" cols ="36"> Enter comments here.</textarea>
+</label></p>
+<p><label> E-mail Address:
+    <input name = "email" type = "text" size ="25">
+    <!--if you put ttype = "password" will show as dots-->
+</label></p>
+
+<p>
+    <strong> Things you liked:</strong><br>
+    <label> Site design
+        <input name = "things liked" type = "checkbox"
+        value = "Design"></label>
+        <label>Links
+            <input name = "thingsliked" type = "checkbox"
+            value = "link">
+        </label>
+</p>
+
+<p>
+<strong> How did you get to our site?</strong><br>
+
+<label>Search engine
+    <input name = "howtosite" type = "radio"
+value = "Search engine" checked></label>
+
+<label>Links from another site
+    <input name = "howtosite" type = "radio"
+value = "search engine"></label>
+
+<label>Another site
+    <input name = "howtosite" type = "radio"
+value = "search engine"></label>
+</p>
+
+<p>
+<label> Rate our site:
+    <select name = "rating">
+        <option selected>Excellent</option>
+        <option selected>Satisfactory</option>
+        <option selected>Poor</option>
+        <option selected>Okay</option>
+        <option selected>Bad</option>
+    </select>
+</label>
+</p>
+
+<p>
+    <input type = "submit" value = "submit">
+    <input type ="reset" value = "Clear">
+</p>
+
+    </form>
+</body>
+</html>
