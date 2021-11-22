@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hw3</title>
+     <link rel="stylesheet" href="Hw3.css">
+</head>
+
+<body>
+<div class = "main-page">
+    <div class="form">
+<label>Product 1:</label> <input type = "number" class type="input" id = "product1" name = "product1" min="0">
+<label>Product 2:</label> <input type = "number"class type="input" id = "product2" name = "product2" min="0">
+<label>Product 3:</label> <input type = "number"class type="input" id = "product3" name = "product3" min="0">
+<label>Product 4:</label> <input type = "number" class type="input" id = "product4" name = "product4" min="0">
+<br>
+<button class = "button" onclick="calEarnings()">Calculate salesperson's earnings</button>
+</div> 
+</form>
+<br>
+
+<div id= 'calculateTotal'>
+
+</div>
+
+<script>
+    function calEarnings()
+    {
+    
+     //get quantity   
+    var product1 = document.getElementById("product1").value;
+    var product2 = document.getElementById("product2").value;
+    var product3 = document.getElementById("product3").value;
+    var product4 = document.getElementById("product4").value;
+    if (product1 < 0 || product2 < 0|| product3 < 0 || product4 < 0)
+    {
+        alert("Please enter value greater than 0");
+        return;
+    }
+    //calculate the total sale
+    var totalSale = (product1 * 75) + (product2 * 100) + (product3 * 125) + (product4 * 200);
+    
+    //calculate the commission
+    var commission = totalSale * .0875;
+    
+    //calculate the earnings
+    var earnings = 900 + commission;
+
+    var text ="Salesperson's total earnings in $" + earnings.toFixed(2) + " that includes $900 per week"
+
+    document.getElementById("calculateTotal").innerHTML = text;
+    document.getElementById("calculateTotal").className = "display";
+    
+    }
+        </script>
+
+
+</body>
+</html>
